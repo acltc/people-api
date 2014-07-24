@@ -1,1 +1,0 @@
-json.partial! @person, partial: 'people/person', as: :person
