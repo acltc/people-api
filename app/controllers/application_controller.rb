@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   # protect_from_forgery with: :exception
   respond_to :json, :xml
 
-  before_filter :restrict_access
+  before_action :restrict_access
 
   def restrict_access
     authenticate_or_request_with_http_token do |token, options|
