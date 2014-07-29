@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140717211408) do
+ActiveRecord::Schema.define(version: 20140729165325) do
 
   create_table "people", force: true do |t|
     t.string   "prefix"
@@ -21,6 +21,13 @@ ActiveRecord::Schema.define(version: 20140717211408) do
     t.string   "suffix"
     t.string   "email"
     t.string   "phone"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", force: true do |t|
+    t.string   "email"
+    t.string   "api_key"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
